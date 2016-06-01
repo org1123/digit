@@ -18,7 +18,7 @@ test_imgs_dir = '/home/server004/jy/digit/data/fcn_label_full/test/';
 model_dir = './';
 %model_dir = '../../examples/finetune/';
 net_model = [model_dir 'fcn11_deploy.prototxt'];
-net_weights = [model_dir 'models/fcn11/fcn11_small_iter_15000.caffemodel'];
+net_weights = [model_dir 'models/fcn11/fcn11_full_iter_15000.caffemodel'];
 phase = 'test'; % run with phase test (so that dropout isn't applied)
 if ~exist(net_weights, 'file')
   error('Please download CaffeNet from Model Zoo before you run this demo');
