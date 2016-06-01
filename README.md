@@ -7,7 +7,7 @@
 
 ####to test:
 * download pre-trained [**model**](http://7xocv2.dl1.z0.glb.clouddn.com/digit_iter_5000.caffemodel) or train your own model as metioned above.
-* run `test_fcn11_full.m`(need Matlab and matcaffe)
+* run `test_fcn11_full.m` (need Matlab and matcaffe)
 * python bindings are on the go.
 
 Code base on [*caffe*](http://caffe.berkeleyvision.org/)  
