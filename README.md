@@ -15,4 +15,5 @@ Code base on [*caffe*](http://caffe.berkeleyvision.org/)
 ***  
 
 Mail: <jy9387@outlook.com> Page: <http://jy9387.github.io>
+
 or Mail: <zhaok.shu@gmail.com> Page: <http://zhaok.xyz>
