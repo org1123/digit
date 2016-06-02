@@ -12,8 +12,9 @@
 
 Code base on [*caffe*](http://caffe.berkeleyvision.org/)  
 
-***  
+***
+Contributors:
 
-Mail: <jy9387@outlook.com> Page: <http://jy9387.github.io>
+* [Yuan.Jiang](http://jy9387.github.io) :email:<jy9387@outlook.com>
 
-or Mail: <zhaok.shu@gmail.com> Page: <http://zhaok.xyz>
+* [Kai.Zhao](http://zhaok.xyz)  :email:<zeakey@outlook.com>
