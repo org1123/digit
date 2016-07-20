@@ -21,15 +21,13 @@ sys.path.insert(0, CAFFE_ROOT + 'python/')
 import caffe
 
 #source data directory
-data_dir = CAFFE_ROOT+'data/fcn_label_full/'
+data_dir = CAFFE_ROOT+'data/fcn_label_small2/'
 
 #lmdb destination: in which directory to save lmdb
 lmdb_dst   = data_dir + 'lmdb/'
 
 
 def main(args):
-    #imgs_dir = data_dir + phase + '_img'
-    #gt_dir = data_dir + phase + '_gt'
     imgs_dir = data_dir + 'fig'
     gt_dir = data_dir + 'mat'
     paths_imgs = fs.gen_paths(imgs_dir, fs.filter_is_img)
@@ -50,8 +48,6 @@ def main(args):
     size2 = matfiles_to_lmdb(paths_gt, lm_gt_dst, 'gt',CAFFE_ROOT = CAFFE_ROOT)
     dif = size1 - size2
     dif = dif.sum()
-    #scipy.io.savemat('./size1',dict({'sz':size1}),appendmat=True)
-    #scipy.io.savemat('./size2',dict({'sz':size2}),appendmat=True)
     if(dif != 0):
          print 'ERROR: img-gt size not match! diff:'+str(diff)
          return 1
