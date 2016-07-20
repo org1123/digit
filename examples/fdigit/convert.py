@@ -21,7 +21,7 @@ sys.path.insert(0, CAFFE_ROOT + 'python/')
 import caffe
 
 #source data directory
-data_dir = CAFFE_ROOT+'data/fcn_label_small0/'
+data_dir = CAFFE_ROOT+'data/fcn_label_full/'
 
 #lmdb destination: in which directory to save lmdb
 lmdb_dst   = data_dir + 'lmdb/'
