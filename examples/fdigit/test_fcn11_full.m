@@ -4,7 +4,7 @@ addpath(genpath([caffe_root,'matlab/']));
 use_gpu = 1;
 
 
-save_root = '../../data/fcn_label_full/results/';
+save_root = '../../data/fcn_label_small0/results/';
 if ~exist(save_root, 'dir'), mkdir(save_root); end;
 % Set caffe mode
 if exist('use_gpu', 'var') && use_gpu
@@ -14,7 +14,7 @@ if exist('use_gpu', 'var') && use_gpu
 else
   caffe.set_mode_cpu();
 end
-test_imgs_dir = '../../data/fcn_label_small/test/';
+test_imgs_dir = '../../data/fcn_label_small0/test/';
 model_dir = './';
 %model_dir = '../../examples/finetune/';
 net_model = [model_dir 'fcn11_deploy.prototxt'];
@@ -51,7 +51,7 @@ for i = 1:length(test_imgs)
     colormap('hot');
     print(1, '-dpng', [save_root, test_imgs{i}, '_hot']);
     s_max = s(:, :, 1:10);
-    s_max(s_max < 0.8) = 0;
+    s_max(s_max < 0.5) = 0;
     [s_max, idx_max] = max(s_max, [], 3);
     s_max = s_max'; idx_max = idx_max';
     [L, num] = bwlabel(s_max, 8);
@@ -74,11 +74,11 @@ for i = 1:length(test_imgs)
     end
     idx_results = cell2mat(idx_results); r_means = cell2mat(r_means); c_means = cell2mat(c_means);
     
-    close; figure(1); imshow(im); hold on;
+    figure(2); imshow(im); hold on;
     for l = 1:length(idx_results)
         text(c_means(l), r_means(l), num2str(idx_results(l)), 'FontSize', 50, 'FontWeight', 'demi', 'Color', 'r', 'BackgroundColor', 'g');
     end
-    print(1, '-dpng', [save_root, test_imgs{i}]);
+    print(2, '-dpng', [save_root, test_imgs{i}]);
     save([save_root, test_imgs{i}, '.mat'], 's', 'idx_results', 'r_means', 'c_means');
 end
 caffe.reset_all();

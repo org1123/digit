@@ -7,7 +7,7 @@ layer {
     phase: TRAIN
   }
   data_param {
-    source: "/home/server004/jy/digit/data/fcn_label_small2/lmdb/train_img_lmdb"
+    source: "/home/server004/jy/digit/data/fcn_label_small0/lmdb/train_img_lmdb"
     batch_size: 1
     backend: LMDB
   }
@@ -20,7 +20,7 @@ layer {
     phase: TRAIN
   }
   data_param {
-    source: "/home/server004/jy/digit/data/fcn_label_small2/lmdb/train_gt_lmdb"
+    source: "/home/server004/jy/digit/data/fcn_label_small0/lmdb/train_gt_lmdb"
     batch_size: 1
     backend: LMDB
   }
