@@ -13,5 +13,5 @@ iter_size: 5
 max_iter: 80000
 weight_decay: 0.0005
 snapshot: 5000
-snapshot_prefix: "fcn11_small"
+snapshot_prefix: "fcn11_full"
 test_initialization: false
