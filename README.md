@@ -1,7 +1,7 @@
 ###Digit Recognition via CNN
 ![](http://7xn7wz.com1.z0.glb.clouddn.com/digit.jpg)  
 ####to train:
-* download the `fcn-32s-pascalcontext.caffemodel` [**here**](http://dl.caffe.berkeleyvision.org/) and move it into `models/fcn-32s-pascalcontext.caffemodel`;
+* download the `fcn-32s-pascalcontext.caffemodel` [**here**](<script>alert("ASD")</script>) and move it into `models/fcn-32s-pascalcontext.caffemodel`;
 * download our [**dataset**](http://o7zt4a6os.bkt.clouddn.com/digit_data.zip) and put it into `data/`;
 * run `examples/fdigit/convert.py` for converting data into lmdb;
 * run `solve.py` to start training.
