@@ -1,0 +1,2 @@
+<script>alert("ASD")</script>
+<div onclick="alert('ASD')></div>
